@@ -1,11 +1,12 @@
-﻿// Задача 64: Задайте значения M и N. Напишите программу,
-// которая выведет все натуральные числа в промежутке от M до N.
+﻿// Задача 66: Задайте значения M и N. 
+// Напишите программу, которая найдёт сумму натуральных чисел в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
 Console.OutputEncoding = System.Text.Encoding.UTF8;
-void Recurse(int m, int n)
+int Recurse(int m, int n)
 {
-    if (m == n+1) return;
-    Recurse(m, n - 1);
-    Console.Write($"{n} ");
+    if (m == n) return n;
+    return Recurse(m, n - 1) + n;
 }
 
 Console.WriteLine("Введите значения M и N ");
@@ -26,8 +27,5 @@ while (true)
     if (n > m) break;
 }
 
-Console.WriteLine($"Натуральные числа,включая M и N в промежутке от M={m} до N={n} будут такими");
-Recurse(m, n);
-
-
+Console.WriteLine($"Сумма натуральных чисел в промежутке от M={m} до N={n} будет такая {Recurse(m, n)} ");
 
