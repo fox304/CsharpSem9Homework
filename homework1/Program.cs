@@ -13,7 +13,7 @@ Console.WriteLine("Введите значение M ");
 int n = 0,m = 0;
 while (true)
 {
-    Console.WriteLine("Значение M  должно быть больше ноля ");
+    Console.WriteLine("Значение M  должно быть больше нуля ");
     m = Convert.ToInt32(Console.ReadLine());
     if (m > 0) break;
 }
